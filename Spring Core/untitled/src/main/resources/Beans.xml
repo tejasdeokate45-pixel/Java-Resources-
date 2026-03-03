@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    byNAME-->
+<!--    <bean id="course" class="org.example.Dsa" />-->
+<!--    <bean id="course" class="org.example.Java" /> same id never exist so use only one &ndash;&gt;-->
+<!--    <bean id="student" class="org.example.Student" autowire="byType"/>-->
+
+<!--    byType if more than 2 bean  autowire-candidate is mandatory  -->
+<!--    <bean id="dsaCourse" class="org.example.Dsa"/>-->
+<!--    <bean id="javaCourse" class="org.example.Java" autowire-candidate="false"/>-->
+<!--    <bean id="Student" class="org.example.Student" autowire="byType"/>-->
+
+<!--    constructor -->
+    <bean id="dsaCourse" class="org.example.Dsa" autowire-candidate="false"/>
+    <bean id="javaCourse" class="org.example.Java" />
+    <bean id="Student" class="org.example.Student" autowire="constructor"/>
+
+
+
+</beans>

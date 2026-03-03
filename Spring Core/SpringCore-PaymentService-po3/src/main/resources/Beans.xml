@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="card" class="org.example.cardPaymentService"/>
+    <bean id="upi" class="org.example.upiPaymentService"/>
+    <bean id="PaymentProcess" class="org.example.PaymentProcess">
+        <constructor-arg ref="upi" name="paymentService"/>
+    </bean>
+
+</beans>
+<!--        &lt;!&ndash; Dependent bean (e.g., a service) &ndash;&gt;-->
+<!--<bean id="emailService" class="com.example.EmailService" />-->
+
+<!--        &lt;!&ndash; Main bean with dependency injection via setter &ndash;&gt;-->
+<!--<bean id="orderService" class="com.example.OrderService">-->
+<!--<property name="emailService" ref="emailService" />-->
+<!--</bean>-->
